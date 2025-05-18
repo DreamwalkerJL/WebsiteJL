@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Medium: 750–1099px */
+  @media (min-width: 750px) and (max-width: 1099px) {
+    .origin-sm-container        { width: 1012px; }
+    .origin-sm-title            { font-size: 6rem; }
+    .origin-sm-about-padding    { padding-left: 4rem; padding-right: 4rem; }
+    .origin-sm-text             { font-size: 1rem; }
+    .origin-sm-section-padding  { padding: 3rem; }
+    .origin-sm-timeline-gap     { gap: 1.75rem; }
+    .origin-sm-higher      { height: 4rem; }
+    .origin-sm-year             { font-size: 1.5rem; }
+    .origin-sm-label            { font-size: 1rem; }
+    .origin-sm-bg1              { width: 831px; height: 808px; left: -131px; top: -78px; }
+    .origin-sm-bg2              { width: 817px; height: 792px; left: -124px; top: -70px; }
+  }
+
+
+}
