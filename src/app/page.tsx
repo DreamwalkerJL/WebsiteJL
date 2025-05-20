@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, JSX } from "react";
+import React, { FC, JSX, useEffect, useState } from "react";
 import "./globals.css"
 import "@fontsource/orbitron"; // Defaults to weight 400
 import "@fontsource/inter";
@@ -11,16 +11,37 @@ import Hero from "./Scenes/Hero/Hero";
 import Arsenal from "./Scenes/Arsenal/Arsenal";
 import Creations from "./Scenes/Creations/Creations";
 import Contact from "./Scenes/Contact/Contact";
+import StickyNav from "./Scenes/Origin/StickyNav";
 
 // Main hero component
 export const HeroMain: FC = (): JSX.Element => {
+
+  
+const [menuOpen, setMenuOpen] = useState(false);
+
+useEffect(() => {
+  document.body.classList.toggle("overflow-hidden", menuOpen);
+  return () => document.body.classList.remove("overflow-hidden");
+}, [menuOpen]);
   return (
-<div className="HeroMain w-full relative   inline-flex flex-col justify-start items-center overflow-hidden -z-20 bg-[#1d1d1d] ">
-<Hero/>
-      <Origin />
-      <Arsenal/>
-      <Creations/>
-      <Contact/>
+<div className="HeroMain w-full relative   inline-flex flex-col justify-start items-center overflow-hidden  bg-[#1d1d1d] ">
+<StickyNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+  <div id="home"className="w-full relative   inline-flex flex-col justify-start items-center overflow-hidden  bg-[#1d1d1d]">
+<Hero menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+</div>
+<div id="origin" className="w-full relative   inline-flex flex-col justify-start items-center overflow-hidden  bg-[#1d1d1d]">
+  <Origin />
+</div>
+<div id="arsenal">
+  <Arsenal />
+</div>
+<div id="creations">
+  <Creations />
+</div>
+<div id="contact" className="w-full relative   inline-flex flex-col justify-start items-center overflow-hidden  bg-[#1d1d1d]">
+  <Contact />
+</div>
+
     </div>
   );
 };

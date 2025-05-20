@@ -1,4 +1,5 @@
 // File: components/Origin/TimelineRightBlock.tsx
+import { motion } from "framer-motion";
 import React from "react";
 
 const TimelineRightBlock = ({
@@ -30,7 +31,7 @@ const TimelineRightBlock = ({
               {mounted && isXlPlus && (
                 <img
                   data-layer="Picture"
-                  className="Picture"
+                  className="Picture pointer-events-none"
                   src="devPic.png"
                 />
               )}
@@ -64,7 +65,7 @@ const TimelineRightBlock = ({
               {mounted && isXlPlus && (
                 <img
                   data-layer="Picture"
-                  className="Picture"
+                  className="Picture pointer-events-none"
                   src="devPic.png"
                 />
               )}
@@ -89,16 +90,24 @@ const TimelineRightBlock = ({
           </div>
         </div>
       )}
-      <div
+      <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex flex-col items-end justify-start self-stretch overflow-hidden"
+                initial={{ opacity: 0, scale: 1, x: "-100px" }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          x: "0px",
+          transition: { delay: .6, duration: 1.1 },
+        }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div
           data-layer="Title Frame"
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture" src="devPic.png" />
+            <img data-layer="Picture" className="Picture pointer-events-none" src="devPic.png" />
           )}
           <div
             data-layer="Text Frame"
@@ -118,17 +127,25 @@ const TimelineRightBlock = ({
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex flex-col items-end justify-start self-stretch overflow-hidden"
+                        initial={{ opacity: 0, scale: 1, x: "-100px" }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          x: "0px",
+          transition: { delay: .8, duration: 1.1 },
+        }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div
           data-layer="Title Frame"
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture" src="3dPic.png" />
+            <img data-layer="Picture" className="Picture pointer-events-none" src="3dPic.png" />
           )}
           <div
             data-layer="Text Frame"
@@ -148,17 +165,25 @@ const TimelineRightBlock = ({
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex flex-col items-end justify-start self-stretch overflow-hidden"
+                        initial={{ opacity: 0, scale: 1, x: "-100px" }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          x: "0px",
+          transition: { delay: 1, duration: 1.1 },
+        }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div
           data-layer="Title Frame"
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture" src="videoPic.png" />
+            <img data-layer="Picture" className="Picture pointer-events-none" src="videoPic.png" />
           )}
           <div
             data-layer="Text Frame"
@@ -178,10 +203,18 @@ const TimelineRightBlock = ({
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex flex-col items-end justify-start self-stretch overflow-hidden"
+                        initial={{ opacity: 0, scale: 1, x: "-100px" }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          x: "0px",
+          transition: { delay: 1.2, duration: 1.1 },
+        }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div
           data-layer="Title Frame"
@@ -190,7 +223,7 @@ const TimelineRightBlock = ({
           {mounted && isXlPlus && (
             <img
               data-layer="Picture"
-              className="Picture"
+              className="Picture pointer-events-none"
               src="graphicDesignPic.png"
             />
           )}
@@ -212,7 +245,7 @@ const TimelineRightBlock = ({
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

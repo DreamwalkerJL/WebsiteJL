@@ -1,4 +1,5 @@
 // File: components/Origin/TimelineLeftBlock.tsx
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 const TimelineLeftBlock = ({
@@ -13,9 +14,17 @@ const TimelineLeftBlock = ({
       data-layer="Timeline"
       className="Timeline absolute top-[273px] flex flex-col items-start justify-start gap-[30px] self-stretch lg:top-0 xl:relative xl:top-0"
     >
-      <div
+      <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex w-full flex-col items-end justify-start overflow-hidden"
+        initial={{ opacity: 0, scale: 1, x: "100px" }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          x: "0px",
+          transition: { delay: 0.8, duration: 1.1 },
+        }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div
           data-layer="Title Frame"
@@ -39,13 +48,21 @@ const TimelineLeftBlock = ({
             </div>
           </div>
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture" src="./aiPic.png" />
+            <img data-layer="Picture" className="Picture pointer-events-none" src="./aiPic.png" />
           )}
         </div>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex w-full flex-col items-end justify-start overflow-hidden"
+        initial={{ opacity: 0, scale: 1, x: "100px" }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+          x: "0px",
+          transition: { delay: 1, duration: 1.1 },
+        }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div
           data-layer="Title Frame"
@@ -76,7 +93,7 @@ const TimelineLeftBlock = ({
             />
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
