@@ -98,7 +98,7 @@ const TimelineRightBlock = ({
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: .6, duration: 1.1 },
+          transition: { delay: .4, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >
@@ -136,7 +136,7 @@ const TimelineRightBlock = ({
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: .8, duration: 1.1 },
+          transition: { delay: .5, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >
@@ -174,7 +174,7 @@ const TimelineRightBlock = ({
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: 1, duration: 1.1 },
+          transition: { delay: .6, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >
@@ -212,7 +212,7 @@ const TimelineRightBlock = ({
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: 1.2, duration: 1.1 },
+          transition: { delay: .8, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >

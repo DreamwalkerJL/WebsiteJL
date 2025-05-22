@@ -4,6 +4,8 @@ import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import NavMain from "./Nav";
+import JLAnimated from "./JLAnimatied";
+import DustOverlay from "./DustOverlay";
 
 type HeroProps = {
   menuOpen: boolean;
@@ -65,24 +67,8 @@ const handleScrollTo = (id: string) => {
           className="BgTop absolute top-[1px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
           src="./BG Top.png"
         />
-        <div className="Jl absolute top-[-90px] flex justify-start font-['Orbitron'] text-[480px] font-black text-white md:hidden">
-          {/* J */}
-          <motion.div
-            initial={{ opacity: 0, x: 40, clipPath: "inset(0 0% 0% 100%)" }}
-            animate={{ opacity: 1, x: 0, clipPath: "inset(0 0% 0% 0%)" }}
-            transition={{ delay: 0.3, duration: 2.3, ease: "easeOut" }}
-          >
-            J
-          </motion.div>
-          {/* L */}
-          <motion.div
-            initial={{ opacity: 0, x: -40, clipPath: "inset( 0 100% 0 0%)" }}
-            animate={{ opacity: 1, x: 0, clipPath: "inset(0% 0% 0 0%)" }}
-            transition={{ delay: 0.3, duration: 2.3, ease: "easeOut" }}
-          >
-            L
-          </motion.div>
-        </div>
+{/* <DustOverlay/> */}
+   <JLAnimated/>
         <img
           data-layer="BG Top Transp"
           className="BgTopTransp absolute top-[1px] h-[902px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
@@ -93,17 +79,19 @@ const handleScrollTo = (id: string) => {
           className="BgBot absolute top-[-29px] h-[1337px] w-[1920px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
           src="BG Bot.png"
         />
+        
         <motion.div
           data-layer="Hero"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3, duration: 1.3, ease: "easeOut" }}
-          className="Hero z-10 flex h-[1250px] flex-col items-start justify-start gap-5 self-stretch rounded-lg px-10 pt-[90px]"
+          className="Hero  flex h-[1250px] flex-col items-start justify-start gap-5 self-stretch rounded-lg px-10 pt-[90px]"
         >
+          
           {/* <NavMain menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
           <div
             data-layer="Hero Main Section"
-            className="HeroMainSection inline-flex items-start justify-end self-stretch overflow-hidden px-2.5"
+            className="HeroMainSection  inline-flex items-start justify-end self-stretch overflow-hidden px-2.5"
           >
             <div
               data-layer="Right Side"
@@ -111,7 +99,7 @@ const handleScrollTo = (id: string) => {
             >
               <div
                 data-layer="About Me"
-                className="AboutMe size- flex flex-col items-start justify-start gap-2.5 overflow-hidden rounded-lg py-[30px] sm:w-full sm:items-center sm:bg-white sm:px-[30px] sm:text-center sm:text-xs md:bg-transparent xl:bg-white xl:p-[20px]"
+                className="AboutMe z-10 size- flex flex-col items-start justify-start gap-2.5 overflow-hidden rounded-lg py-[30px] sm:w-full sm:items-center sm:bg-white sm:px-[30px] sm:text-center sm:text-xs md:bg-transparent xl:bg-white xl:p-[20px]"
               >
                 <div
                   data-layer="About Me Title"
@@ -134,7 +122,7 @@ const handleScrollTo = (id: string) => {
               </div>
 <motion.div
   data-layer="Start Frame"
-  className="StartFrame flex cursor-pointer flex-col items-end justify-end gap-2.5 overflow-hidden rounded-lg pb-2.5 pl-2.5 sm:w-full sm:items-center"
+  className="StartFrame flex cursor-pointer z-50 flex-col items-end justify-end gap-2.5 overflow-hidden rounded-lg pb-2.5 pl-2.5 sm:w-full sm:items-center"
   initial="hidden"
   animate="visible"
   variants={{
@@ -147,26 +135,44 @@ const handleScrollTo = (id: string) => {
     },
   }}
   onClick={() => handleScrollTo("origin")}
+  whileHover={{
+    backgroundColor: "rgba(255, 60, 172, 0.1)",   // soft pink glow
+    boxShadow: "0px 8px 20px rgba(255, 60, 172, 0.3)",
+    borderRadius: "12px",
+    skewY: -1,                                     // subtle slant
+    skewX: -1,                                     // subtle slant
+    transition: { duration: 0.2, ease: "easeOut" }
+  }}
+  whileTap={{
+    boxShadow: "0px 4px 10px rgba(255, 60, 172, 0.4)"
+  }}
 >
-  {/* TEXT RISES FROM LINE */}
   <motion.div
     data-layer="Start Text"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1.2, ease: "easeOut" }}
-    className="StartText z-10 font-['Orbitron'] text-[40px] font-semibold text-neutral-700 sm:text-xl sm:[text-shadow:_0px_0px_4px_rgb(255_255_255_/_1.00)]"
+    transition={{ duration: .5, ease: "easeOut" }}
+    className="StartText font-['Orbitron'] text-[40px] font-semibold text-neutral-700 sm:text-xl"
+    whileHover={{
+      color: "#FF3CAC",                           // pop the pink on the text
+      y: -3,                                      // lift text slightly
+      transition: { duration: 0.2 }
+    }}
   >
     One life. Many layers.
   </motion.div>
 
-  {/* ARROW SWIPE */}
   <motion.div
     data-layer="Arrow 1"
     className="Arrow1 w-full"
     initial={{ scaleX: 0 }}
     animate={{ scaleX: 1 }}
-    transition={{ duration: 2.5, ease: "easeOut" }}
+    transition={{ duration: .5, ease: "easeOut" }}
     style={{ transformOrigin: "left", transformBox: "fill-box" }}
+    whileHover={{
+      x: -5,                                      // slide arrow right
+      transition: { type: "tween", duration: 0.2 }
+    }}
   >
     <svg
       className="w-full"
@@ -181,6 +187,7 @@ const handleScrollTo = (id: string) => {
     </svg>
   </motion.div>
 </motion.div>
+
 
 
 

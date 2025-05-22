@@ -22,7 +22,7 @@ const TimelineLeftBlock = ({
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: 0.8, duration: 1.1 },
+          transition: { delay: 0.6, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >
@@ -60,7 +60,7 @@ const TimelineLeftBlock = ({
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: 1, duration: 1.1 },
+          transition: { delay: .8, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >

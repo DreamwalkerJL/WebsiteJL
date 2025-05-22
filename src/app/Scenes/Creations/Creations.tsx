@@ -156,7 +156,7 @@ const Creations: React.FC = () => {
           {/* Creations Row with mapping & stagger */}
           <motion.div
             data-layer="Creations Row"
-            className="CreationsRow flex w-screen max-w-[1920px] flex-wrap items-start justify-center gap-5 overflow-hidden px-36 pt-12 md:px-10"
+            className="CreationsRow flex w-screen max-w-[1920px] flex-wrap items-start justify-center gap-5  px-36 pt-12 md:px-10"
             variants={rowVariants}
             initial="hidden"
             whileInView="show"
@@ -168,10 +168,10 @@ const Creations: React.FC = () => {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="Creation w-full min-w-[350px] flex-1/3 md:min-w-[150px] md:flex-auto xl:w-[350px] relative inline-flex h-52 flex-col items-center justify-start overflow-hidden rounded-lg bg-cover bg-center pt-5 p-5 cursor-pointer"
+                className="Creation w-full  min-w-[350px] flex-1/3 md:min-w-[150px] md:flex-auto xl:w-[350px] relative inline-flex h-52 flex-col items-center justify-start rounded-lg bg-cover bg-center pt-5 p-5 cursor-pointer"
                 style={{ backgroundImage: `url(${bgUrl})` }}
                 variants={creationVariants}
-                whileHover={{ scale: 1.02, boxShadow: "0 0 12px rgba(255,255,255,0.8)", transition: { duration: 0.3, ease: "easeOut" } }}
+                whileHover={{ scale: 1.02, boxShadow: "0 0 12px rgba(255,255,255,0.8)",   filter: "brightness(1.2)", transition: { duration: 0.3, ease: "easeOut" } }}
               >
                 <div className="TextFrame flex flex-col items-start justify-center gap-2.5 self-stretch rounded-lg">
                   <div className="Title font-['Orbitron'] text-3xl font-semibold text-white uppercase text-shadow-[0px_0px_10px_rgba(0,0,0,1)] sm:text-[20px]">

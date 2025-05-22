@@ -1,183 +1,278 @@
+import React from 'react';
+import { motion, Variants } from 'framer-motion';
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
+const fadeSide: Variants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0 }
+};
+
 const Contact: React.FC = () => {
+
+    const handleScrollTo = () => {
+    const el = document.getElementById("home");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // fallback to window top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   return (
-    <div
+    <motion.div
       data-layer="Hero Main"
       className="HeroMain inline-flex w-full max-w-[1920px] flex-col items-center justify-start overflow-hidden bg-white"
+
     >
-      <div
+      {/* ===== Contact Section ===== */}
+      <motion.div
         data-layer="Contact"
         className="Contact relative flex h-[761px] w-full flex-col items-end justify-start overflow-hidden bg-white md:items-center"
+
+
       >
-        <div
+        <motion.div
           data-layer="Contact Main"
           className="ContactMain flex w-[900px] flex-1 flex-col items-center justify-center pr-36 sm:px-[40px] md:w-full md:px-[140px] lg:w-[600px] xl:w-[700px] xl:pr-24"
+
+
         >
-          <div
+          {/* Title */}
+          <motion.h2
             data-layer="Contact"
-            className="Contact justify-start font-['Orbitron'] text-9xl font-semibold text-neutral-700 sm:text-[75px]"
+            className="Contact font-['Orbitron'] text-9xl font-semibold text-neutral-700 sm:text-[75px]"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
           >
             Contact
-          </div>
-          <div
+          </motion.h2>
+
+          {/* Form */}
+          <motion.form
             data-layer="Contact form"
-            className="ContactForm size- flex w-full flex-col items-start justify-center gap-2.5 overflow-hidden rounded-lg px-5 py-5"
+            className="ContactForm flex w-full flex-col items-start justify-center gap-6 overflow-hidden rounded-lg px-5 py-5"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
           >
-            <div
+            {/* Full Name */}
+            <motion.div
               data-layer="input"
-              className="Input flex flex-col items-start justify-start gap-1.5 self-stretch"
+              className="Input flex flex-col items-start justify-start gap-1.5 w-full"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
             >
-              <div
+              <label
                 data-layer="Full Name"
-                className="FullName justify-start font-['Inter'] text-sm leading-tight font-medium text-slate-900"
+                className="text-sm font-medium text-slate-900 font-['Inter']"
+                htmlFor="fullName"
               >
                 Full Name
+              </label>
+              <div className="relative w-full">
+                <input
+                  id="fullName"
+                  type="text"
+                  placeholder="Full Name"
+                  className="h-10 w-full rounded-md border border-slate-300 bg-white px-3 outline-none placeholder:text-slate-400"
+                />
               </div>
-              <div
-                data-layer="input/with button"
-                className="InputWithButton inline-flex items-start justify-start gap-2 self-stretch"
-              >
-                <div
-                  data-layer="default"
-                  className="Default inline-flex h-10 flex-1 flex-col items-start justify-start gap-1.5"
-                >
-                  <div
-                    data-layer="field"
-                    className="Field inline-flex h-10 items-center justify-start self-stretch rounded-md bg-white py-2 pr-14 pl-3 outline outline-slate-300"
-                  >
-                    <div
-                      data-layer="Full Name"
-                      className="FullName justify-start font-['Inter'] text-base leading-normal font-normal text-slate-400"
-                    >
-                      Full Name
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <div data-layer="Enter your full name" className="EnterYourFullName justify-start text-slate-500 text-sm font-normal font-['Inter'] leading-tight">Enter your full name</div> */}
-            </div>
-            <div
+            </motion.div>
+
+            {/* Email */}
+            <motion.div
               data-layer="input"
-              className="Input flex flex-col items-start justify-start gap-1.5 self-stretch"
+              className="Input flex flex-col items-start justify-start gap-1.5 w-full"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.6 }}
             >
-              <div
+              <label
                 data-layer="Email"
-                className="Email justify-start font-['Inter'] text-sm leading-tight font-medium text-slate-900"
+                className="text-sm font-medium text-slate-900 font-['Inter']"
+                htmlFor="email"
               >
                 Email
+              </label>
+              <div className="relative w-full">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                  className="h-10 w-full rounded-md border border-slate-300 bg-white px-3 outline-none placeholder:text-slate-400"
+                />
               </div>
-              <div
-                data-layer="input/with button"
-                className="InputWithButton inline-flex items-start justify-start gap-2 self-stretch"
-              >
-                <div
-                  data-layer="default"
-                  className="Default inline-flex h-10 flex-1 flex-col items-start justify-start gap-1.5"
-                >
-                  <div
-                    data-layer="field"
-                    className="Field inline-flex h-10 items-center justify-start self-stretch rounded-md bg-white py-2 pr-14 pl-3 outline outline-slate-300"
-                  >
-                    <div
-                      data-layer="Email"
-                      className="Email justify-start font-['Inter'] text-base leading-normal font-normal text-slate-400"
-                    >
-                      Email
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <div data-layer="Enter your email address" className="EnterYourEmailAddress justify-start text-slate-500 text-sm font-normal font-['Inter'] leading-tight">Enter your email address</div> */}
-            </div>
-            <div
-              data-layer="textarea frame"
-              className="TextareaFrame size- flex w-full flex-col items-start justify-start gap-1.5"
-            >
-              <div
-                data-layer="textarea"
-                className="Textarea size- flex w-full flex-col items-start justify-start gap-2"
-              >
-                <div
-                  data-layer="label"
-                  className="Label justify-start font-['Inter'] text-sm leading-none font-medium text-black"
-                >
-                  Your message
-                </div>
-                <div
-                  data-layer="textarea"
-                  className="Textarea inline-flex h-20 w-full items-start justify-start gap-2.5 rounded-md bg-white px-3 py-2 outline outline-offset-[-1px] outline-slate-300 md:w-full"
-                >
-                  <div
-                    data-layer="Type your message here"
-                    className="TypeYourMessageHere flex-1 justify-start font-['Inter'] text-sm leading-tight font-normal text-slate-400"
-                  >
-                    Type your message here
-                  </div>
-                </div>
-                <div
-                  data-layer="button"
-                  data-state="Default"
-                  data-type="default"
-                  className="Button inline-flex w-full items-center justify-center gap-2.5 rounded-md bg-slate-900 px-4 py-2 md:w-full"
-                >
-                  <div
-                    data-layer="Continue"
-                    className="Continue justify-start font-['Inter'] text-sm leading-normal font-medium text-white"
-                  >
-                    Send message
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
 
-        <div className="xxl:right-[calc(1920px-100vw)] absolute top-0 inline-flex h-full w-full overflow-hidden md:hidden lg:right-[calc(1520px-100vw)] xl:right-[calc(1620px-100vw)]">
-          <img
+            {/* Message */}
+            <motion.div
+              data-layer="textarea frame"
+              className="TextareaFrame flex w-full flex-col items-start justify-start gap-1.5"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7 }}
+            >
+              <label
+                data-layer="label"
+                className="text-sm font-medium text-black font-['Inter']"
+                htmlFor="message"
+              >
+                Your message
+              </label>
+              <textarea
+                id="message"
+                placeholder="Type your message here"
+                className="h-20 w-full rounded-md border border-slate-300 bg-white px-3 py-2 outline-none placeholder:text-slate-400"
+              />
+            </motion.div>
+
+            {/* Send Button */}
+            <motion.button
+              type="submit"
+              data-layer="button"
+              className="w-full rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white font-['Inter']"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.8 }}
+            >
+              Send message
+            </motion.button>
+          </motion.form>
+        </motion.div>
+
+        {/* Character Images */}
+        <motion.div
+          className="xxl:right-[calc(1920px-100vw)] absolute top-0 inline-flex h-full w-full overflow-hidden md:hidden lg:right-[calc(1520px-100vw)] xl:right-[calc(1620px-100vw)]"
+          variants={fadeSide}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }}
+        >
+          <motion.img
             data-layer="Contact Char with BG"
-            className="ContactCharWithBg absolute top-0 left-[0px] min-h-[761px] min-w-[796px]"
+            className="ContactCharWithBg absolute z-50 top-0 left-0 min-h-[761px] min-w-[796px]"
             src="Contact Char with BG.png"
+            alt="Contact character background"
+              // start at normal brightness
+  initial={{
+    filter: 'brightness(1)',
+    x: 0,
+    y: 0,
+  }}
+  // flicker brightness & slight shake
+  animate={{
+    filter: [
+      'brightness(1)',   // normal
+      'brightness(0.2)', // dark flash
+      'brightness(1)',
+      'brightness(0.5)', // mid‐flash
+      'brightness(1)'
+    ],
+    x: [0, -3, 3, -2, 0], // tiny horizontal jitter
+    y: [0, 2, -2, 1, 0],  // tiny vertical jitter
+  }}
+  transition={{
+    duration: 0.1,            // total cycle length
+    ease: 'linear',           // keep it abrupt
+    times: [0, 0.2, 0.4, 0.6, 1],
+    repeat: Infinity,         // loop forever
+    repeatType: 'loop',
+    repeatDelay: 20,           // pause before next glitch
+
+  }}
           />
-          <img
-            data-layer="Contact Char Additional"
-            className="ContactCharAdditional absolute top-[-10px] left-[-10px] min-h-[781px] min-w-[1251px] p-2.5"
-            src="Contact Char Additional.png"
-          />
-        </div>
-      </div>
-      <div
+<motion.img
+  data-layer="Contact Char Additional"
+  className="
+    ContactCharAdditional
+    absolute
+    top-[-10px]
+    left-[-10px]
+    min-h-[781px]
+    min-w-[1251px]
+    p-2.5
+
+    /* enable filters & transforms */
+    filter
+    will-change-[filter,transform]
+  "
+  src="Contact Char Additional.png"
+  alt="Contact character additional"
+
+  // start at normal brightness
+  initial={{
+    filter: 'brightness(1)',
+    x: 0,
+    y: 0,
+  }}
+  // flicker brightness & slight shake
+  animate={{
+    filter: [
+      'brightness(1)',   // normal
+      'brightness(0.2)', // dark flash
+      'brightness(1)',
+      'brightness(0.5)', // mid‐flash
+      'brightness(1)'
+    ],
+    x: [0, -3, 3, -2, 0], // tiny horizontal jitter
+    y: [0, 2, -2, 1, 0],  // tiny vertical jitter
+  }}
+  transition={{
+    duration: 0.1,            // total cycle length
+    ease: 'linear',           // keep it abrupt
+    times: [0, 0.2, 0.4, 0.6, 1],
+    repeat: Infinity,         // loop forever
+    repeatType: 'loop',
+    repeatDelay: 10,           // pause before next glitch
+  }}
+/>
+
+
+        </motion.div>
+      </motion.div>
+
+      {/* ===== Footer ===== */}
+      <motion.footer
         data-layer="footer"
-        className="Footer flex flex-col items-center justify-center self-stretch overflow-hidden bg-neutral-700 px-2.5 py-5"
+        className="Footer flex flex-col items-center justify-center w-full bg-neutral-700 px-2.5 py-5"
+
       >
-        <div
-          data-layer="button frame"
-          className="ButtonFrame size- inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-lg bg-pink-500 p-2.5"
-        >
-          <div
-            data-layer="text"
-            className="Text justify-start font-['Orbitron'] text-sm leading-tight font-semibold text-white"
-          >
-            GO TO THE TOP
-          </div>
-        </div>
-        <div
-          data-layer="text frame"
-          className="TextFrame size- flex flex-col items-center justify-center gap-2.5 overflow-hidden p-2.5"
-        >
-          <div
-            data-layer="text"
-            className="Text justify-start font-['Inter'] text-sm leading-tight font-medium text-white"
-          >
+ <div
+  className="ButtonFrame inline-flex items-center justify-center gap-2.5 rounded-lg bg-pink-500 p-2.5 cursor-pointer"
+  onClick={() => handleScrollTo()}
+>
+  <span className="text-sm font-semibold text-white font-['Orbitron']">
+    GO TO THE TOP
+  </span>
+</div>
+        <div className="TextFrame flex flex-col items-center justify-center gap-2.5 p-2.5">
+          <span className="text-sm font-medium text-white font-['Inter']">
             Joshua.lim@hotmail.ch
-          </div>
-          <div
-            data-layer="text"
-            className="Text justify-start font-['Inter'] text-sm leading-tight font-medium text-white"
-          >
+          </span>
+          <span className="text-sm font-medium text-white font-['Inter']">
             crafted in the fog · transmitted from the edge · © 2025 Joshua Lim
-          </div>
+          </span>
         </div>
-      </div>
-    </div>
+      </motion.footer>
+    </motion.div>
   );
 };
 

@@ -69,7 +69,7 @@ const Creations: React.FC = () => {
   return (
     <div className="CreationsContainer flex flex-col items-center bg-white">
       <motion.div
-        className="CreationsRow flex flex-wrap justify-center gap-5 p-8"
+        className="CreationsRow flex flex-wrap justify-center gap-5 p-8 overflow-visible"
         variants={containerVariants}
         initial="hidden"
         animate="show"
@@ -80,7 +80,7 @@ const Creations: React.FC = () => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-full max-w-[350px] h-52 bg-cover bg-center rounded-lg relative overflow-hidden cursor-pointer p-5 flex flex-col justify-between`} 
+            className={`w-full max-w-[350px] h-52 bg-cover bg-center rounded-lg relative  cursor-pointer p-5 flex flex-col justify-between`} 
             style={{ backgroundImage: `url(${bgUrl})` }}
             variants={creationVariants}
             whileHover={{
