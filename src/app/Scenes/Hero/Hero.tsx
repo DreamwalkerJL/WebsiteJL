@@ -159,7 +159,7 @@ const Hero: React.FC<HeroProps> = ({ menuOpen, setMenuOpen }) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="StartText font-['Orbitron'] text-[40px] font-semibold text-neutral-700 sm:text-xl"
+                  className="StartText font-['Orbitron'] text-[40px] font-semibold text-neutral-700 sm:text-xl       [text-shadow:0_0_8px_white]"
                   whileHover={{
                     color: "#FF3CAC", // pop the pink on the text
                     y: -3, // lift text slightly
