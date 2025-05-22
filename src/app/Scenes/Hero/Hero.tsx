@@ -129,7 +129,7 @@ const Hero: React.FC<HeroProps> = ({ menuOpen, setMenuOpen }) => {
               </div>
               <motion.div
                 data-layer="Start Frame"
-                className="StartFrame z-50 flex cursor-pointer flex-col items-end justify-end gap-2.5 overflow-hidden rounded-lg pb-2.5 pl-2.5 sm:w-full sm:items-center"
+                className="StartFrame z-30 flex cursor-pointer flex-col items-end justify-end gap-2.5 overflow-hidden rounded-lg pb-2.5 pl-2.5 sm:w-full sm:items-center"
                 initial="hidden"
                 animate="visible"
                 variants={{
