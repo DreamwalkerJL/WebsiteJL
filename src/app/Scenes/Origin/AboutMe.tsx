@@ -24,7 +24,7 @@ const AboutMe = () => (
       Along the way, I’ve worked professionally as an ICT Support Specialist and
       a SharePoint Web Developer, giving me hands-on experience with real-world
       systems and collaborative environments. This blend of technical depth and
-      creative vision shapes everything I build today.
+      creative vision, shapes everything I build today.
     </div>
   </div>
 );

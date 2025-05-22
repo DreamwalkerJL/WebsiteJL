@@ -6,7 +6,7 @@ const creationsData = [
   {
     id: 1,
     title: "Gizapp",
-    text: "I built GizApp so planning events with friends feels good. Clean design, simple invites, and no group chat chaos.",
+    text: "I built GizApp to make planning events with friends feel effortless - clean design, simple invites, no group chat chaos.",
     bgUrl: "/Creations/Creation_1.png",
     link: "https://gizapp.net/" // add your URL here
   },
@@ -20,14 +20,14 @@ const creationsData = [
   {
     id: 3,
     title: "Artstation",
-    text: "A collection of my 2D and 3D artwork, shared on ArtStation.",
+    text: "A showcase of my 2D and 3D creations, featured on ArtStation.",
     bgUrl: "/Creations/Creation_3.png",
     link: "https://www.artstation.com/dreamwalkerworld"
   },
   {
     id: 4,
     title: "soundtracks",
-    text: "My YouTube channel where I post original soundtracks from series paired with animated visuals.",
+    text: "My YouTube channel featuring original soundtracks inspired by series, paired with animated visuals.",
     bgUrl: "/Creations/Creation_4.png",
     link: "https://www.youtube.com/@DWBattleMusic"
   },
