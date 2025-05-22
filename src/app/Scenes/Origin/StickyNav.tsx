@@ -172,7 +172,7 @@ useEffect(() => {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: -200, opacity: 0 }}
                       transition={{ duration: 0.4, ease: "easeOut" }}
-                      className="fixed top-0 left-0 z-50 flex h-screen w-full flex-col items-center justify-center gap-6 bg-white"
+                      className="fixed top-0 left-0 z-50 opacity-100 flex h-screen w-full flex-col items-center justify-center gap-6 bg-white"
                     >
                       <button
                         onClick={() => setMenuOpen(false)}
@@ -196,6 +196,7 @@ useEffect(() => {
                         </div>
                       ))}
                     </motion.div>
+                    
                   )}
                 </AnimatePresence>
                      </div>
