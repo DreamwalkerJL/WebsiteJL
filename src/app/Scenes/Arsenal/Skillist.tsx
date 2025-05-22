@@ -64,7 +64,7 @@ export default function SkillList() {
         >
           <motion.div
             data-layer="List"
-            className="List size- inline-flex flex-col items-start justify-start gap-2.5 overflow-hidden text-xl sm:text-[12px]"
+            className="List size- inline-flex flex-col items-start justify-start gap-2.5  text-xl sm:text-[12px]"
             variants={column1Variants}
           >
             {[
@@ -143,7 +143,7 @@ export default function SkillList() {
         >
           <motion.div
             data-layer="List"
-            className="List size- inline-flex flex-col items-start justify-start gap-2.5 overflow-hidden"
+            className="List size- inline-flex flex-col items-start justify-start gap-2.5 "
             variants={column2Variants}
           >
             {[

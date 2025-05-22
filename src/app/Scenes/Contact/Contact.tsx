@@ -163,51 +163,51 @@ const Contact: React.FC = () => {
             className="ContactCharWithBg mix-blend-darken absolute z-10 top-0 left-0 min-h-[761px] min-w-[796px]"
             src="Contact-Char-with-BG.jpg"
             alt="Contact character background"
-            initial={{ filter: 'brightness(1)', x: 0, y: 0 }}
-            animate={{
-              filter: [
-                'brightness(1)',
-                'brightness(0.2)',
-                'brightness(1)',
-                'brightness(0.5)',
-                'brightness(1)'
-              ],
-              x: [0, -3, 3, -2, 0],
-              y: [0, 2, -2, 1, 0],
-            }}
-            transition={{
-              duration: 0.1,
-              ease: 'linear',
-              times: [0, 0.2, 0.4, 0.6, 1],
-              repeat: Infinity,
-              repeatType: 'loop',
-              repeatDelay: 20,
-            }}
+            // initial={{ filter: 'brightness(1)', x: 0, y: 0 }}
+            // animate={{
+            //   filter: [
+            //     'brightness(1)',
+            //     'brightness(0.2)',
+            //     'brightness(1)',
+            //     'brightness(0.5)',
+            //     'brightness(1)'
+            //   ],
+            //   x: [0, -3, 3, -2, 0],
+            //   y: [0, 2, -2, 1, 0],
+            // }}
+            // transition={{
+            //   duration: 0.1,
+            //   ease: 'linear',
+            //   times: [0, 0.2, 0.4, 0.6, 1],
+            //   repeat: Infinity,
+            //   repeatType: 'loop',
+            //   repeatDelay: 20,
+            // }}
           />
           <motion.img
             className="ContactCharAdditional mix-blend-darken  absolute top-[-10px] left-[-10px] min-h-[781px] min-w-[1251px] p-2.5 filter will-change-[filter,transform]"
             src="Contact-Char-Additional.jpg"
             alt="Contact character additional"
-            initial={{ filter: 'brightness(1)', x: 0, y: 0 }}
-            animate={{
-              filter: [
-                'brightness(1)',
-                'brightness(0.2)',
-                'brightness(1)',
-                'brightness(0.5)',
-                'brightness(1)'
-              ],
-              x: [0, -3, 3, -2, 0],
-              y: [0, 2, -2, 1, 0],
-            }}
-            transition={{
-              duration: 0.1,
-              ease: 'linear',
-              times: [0, 0.2, 0.4, 0.6, 1],
-              repeat: Infinity,
-              repeatType: 'loop',
-              repeatDelay: 10,
-            }}
+            // initial={{ filter: 'brightness(1)', x: 0, y: 0 }}
+            // animate={{
+            //   filter: [
+            //     'brightness(1)',
+            //     'brightness(0.2)',
+            //     'brightness(1)',
+            //     'brightness(0.5)',
+            //     'brightness(1)'
+            //   ],
+            //   x: [0, -3, 3, -2, 0],
+            //   y: [0, 2, -2, 1, 0],
+            // }}
+            // transition={{
+            //   duration: 0.1,
+            //   ease: 'linear',
+            //   times: [0, 0.2, 0.4, 0.6, 1],
+            //   repeat: Infinity,
+            //   repeatType: 'loop',
+            //   repeatDelay: 10,
+            // }}
           />
         </motion.div>
       </motion.div>
