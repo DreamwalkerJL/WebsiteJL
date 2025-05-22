@@ -1,6 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  turbopack: false, // ✅ This is the correct way now
-};
+import type { NextConfig } from 'next'
 
-module.exports = nextConfig;
+const nextConfig: NextConfig = {
+  // Remove this → turbopack is NOT a valid config key
+}
+
+export default nextConfig
