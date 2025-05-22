@@ -23,7 +23,7 @@ useEffect(() => {
   return () => document.body.classList.remove("overflow-hidden");
 }, [menuOpen]);
   return (
-<div className="HeroMain w-full relative sm:mt-[-100px]   inline-flex flex-col justify-start items-center overflow-hidden  bg-[#1d1d1d] ">
+<div className="HeroMain w-full relative    inline-flex flex-col justify-start items-center overflow-hidden  bg-[#1d1d1d] ">
 <StickyNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
   <div id="home"className="w-full relative   inline-flex flex-col justify-start items-center overflow-hidden  bg-[#1d1d1d]">
 <Hero menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

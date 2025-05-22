@@ -54,7 +54,7 @@ const Hero: React.FC<HeroProps> = ({ menuOpen, setMenuOpen }) => {
   }, [menuOpen]);
 
   return (
-    <motion.div className="HeroMain relative inline-flex h-[1300px] w-full max-w-[1920px] flex-col items-center justify-start overflow-hidden">
+    <motion.div className="HeroMain relative inline-flex h-[1300px] sm:h-[900px] w-full max-w-[1920px] flex-col items-center justify-start overflow-hidden">
       <motion.div
         initial={{ scale: 1.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -63,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({ menuOpen, setMenuOpen }) => {
       >
         <Image
           data-layer="BG Top"
-          className="BgTop absolute w-full top-[1px] min-w-[1920px] mix-blend-darken sm:left-[-400px] md:left-[-480px]"
+          className="BgTop absolute w-full top-[1px] min-w-[1920px] mix-blend-darken sm:left-[-600px] md:left-[-480px] sm:top-[-165] sm:scale-60"
           src="/BG Top.jpg"
           alt="BG Top"
     height={920}
@@ -73,7 +73,7 @@ const Hero: React.FC<HeroProps> = ({ menuOpen, setMenuOpen }) => {
         <JLAnimated />
         <Image
           data-layer="BG Top Transp"
-          className="BgTopTransp absolute top-[1px] h-[902px] min-w-[1920px] mix-blend-darken sm:left-[-400px] md:left-[-480px]"
+          className="BgTopTransp absolute top-[1px] h-[902px] min-w-[1920px] mix-blend-darken sm:left-[-600px] md:left-[-480px] sm:top-[-165] sm:scale-60"
           src="/BG Top Transp.jpg"
           alt="Bg Top Transp"
              height={902}
@@ -81,7 +81,7 @@ const Hero: React.FC<HeroProps> = ({ menuOpen, setMenuOpen }) => {
         />
         <Image
           data-layer="BG Bot"
-          className="BgBot absolute top-[-29px] h-[1337px] w-[1920px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
+          className="BgBot absolute top-[-29px] h-[1337px] w-[1920px] min-w-[1920px] sm:left-[-600px] md:left-[-480px] sm:top-[-270px] sm:scale-60"
           src="/BG Bot.png"
           alt="BG Bot"
                        height={1250}
@@ -93,20 +93,20 @@ const Hero: React.FC<HeroProps> = ({ menuOpen, setMenuOpen }) => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3, duration: 1.3, ease: "easeOut" }}
-          className="Hero flex h-[1250px] flex-col items-start justify-start gap-5 self-stretch rounded-lg px-10 pt-[90px]"
+          className="Hero flex h-[1250px] flex-col items-start justify-start gap-5 self-stretch rounded-lg px-10 pt-[90px] "
         >
           {/* <NavMain menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
           <div
             data-layer="Hero Main Section"
-            className="HeroMainSection inline-flex items-start justify-end self-stretch overflow-hidden px-2.5"
+            className="HeroMainSection inline-flex items-start justify-end self-stretch overflow-hidden px-2.5 "
           >
             <div
-              data-layer="Right Side"
-              className="RightSide md:gap-440px inline-flex w-[910px] flex-col items-end justify-center gap-[440px] pr-[100px] pb-[50px] sm:w-full sm:items-center sm:gap-[50px] sm:self-stretch sm:pt-[309px] sm:text-center sm:text-xs md:flex-1 md:p-0 xl:gap-[50px] xl:pt-[350px] xl:pr-10 xl:pb-[50px]"
+              data-layer="Right Side "
+              className="RightSide  md:gap-440px inline-flex w-[910px] flex-col items-end justify-center gap-[440px] pr-[100px] pb-[50px] sm:w-full sm:items-center sm:gap-[50px] sm:self-stretch sm:pt-[309px] sm:text-center sm:text-xs md:flex-1 md:p-0 xl:gap-[50px] xl:pt-[350px] xl:pr-10 xl:pb-[50px]"
             >
               <div
                 data-layer="About Me"
-                className="AboutMe size- z-10 flex flex-col items-start justify-start gap-2.5 overflow-hidden rounded-lg py-[30px] sm:w-full sm:items-center sm:bg-white sm:px-[30px] sm:text-center sm:text-xs md:bg-transparent xl:bg-white xl:p-[20px]"
+                className="AboutMe  size- z-10 flex flex-col items-start justify-start gap-2.5 overflow-hidden rounded-lg py-[30px] sm:w-full sm:items-center sm:bg-white sm:px-[30px] sm:text-center sm:text-xs md:bg-transparent xl:bg-white xl:p-[20px]"
               >
                 <div
                   data-layer="About Me Title"
