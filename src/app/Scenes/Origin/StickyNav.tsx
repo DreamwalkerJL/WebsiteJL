@@ -160,6 +160,12 @@ useEffect(() => {
         >
           <div className="mx-auto flex max-w-[1920px] items-center justify-between px-6 md:justify-end">
                 <div
+                  className="cursor-pointer text-4xl my-2 p-1 rounded-[3px] text-[#404040] absolute left-0 pl-8  font-['Orbitron'] uppercase"
+                  onClick={() => setMenuOpen((prev) => !prev)}
+                >
+               JL
+                </div>
+                <div
                   className="cursor-pointer text-4xl my-2 p-1 rounded-[3px] text-[#404040]  "
                   onClick={() => setMenuOpen((prev) => !prev)}
                 >
