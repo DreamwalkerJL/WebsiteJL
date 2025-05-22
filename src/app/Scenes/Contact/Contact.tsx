@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
   };
 
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = () => {
     // Allow the form to submit normally to Formspree
     setTimeout(() => {
       formRef.current?.reset(); // ✅ Clear form after delay

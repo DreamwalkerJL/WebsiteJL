@@ -25,10 +25,6 @@ const Origin: React.FC = () => {
     <div data-layer="Hero Main" className="HeroMain w-full max-w-[1920px] relative  inline-flex flex-col justify-start items-center overflow-hidden">
       <motion.div
         className="OriginMain flex flex-col items-start justify-start gap-[50px] self-stretch overflow-hidden bg-white lg:gap-[0px]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeInUp}
       >
         <motion.div
           className="OriginTitle inline-flex items-start justify-center self-stretch overflow-hidden bg-white py-2.5"

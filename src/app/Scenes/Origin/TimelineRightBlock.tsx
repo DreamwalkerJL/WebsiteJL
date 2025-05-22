@@ -1,17 +1,16 @@
 // File: components/Origin/TimelineRightBlock.tsx
 import { motion } from "framer-motion";
 import React from "react";
-
+import Image from "next/image";
 const TimelineRightBlock = ({
   isXlPlus,
   mounted,
-  isMaxLg,
   isMaxMd,
 }: {
   isXlPlus: boolean;
   isMaxLg: boolean;
   isMaxMd: boolean;
-  mounted: any;
+  mounted: boolean;
 }) => {
   return (
     <div
@@ -29,10 +28,13 @@ const TimelineRightBlock = ({
               className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
             >
               {mounted && isXlPlus && (
-                <img
+                <Image
                   data-layer="Picture"
-                  className="Picture mix-blend-darken  pointer-events-none"
-                  src="devPic.jpg"
+                  className="Picture pointer-events-none mix-blend-darken"
+                  src="/devPic.jpg"
+                  alt="devPic"
+                               height={107}
+    width={403}
                 />
               )}
               <div
@@ -63,10 +65,13 @@ const TimelineRightBlock = ({
               className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
             >
               {mounted && isXlPlus && (
-                <img
+                <Image
                   data-layer="Picture"
-                  className="Picture mix-blend-darken  pointer-events-none"
-                  src="devPic.jpg"
+                  className="Picture pointer-events-none mix-blend-darken"
+                  src="/devPic.jpg"
+                  alt="devPic"
+                                                 height={107}
+    width={403}
                 />
               )}
               <div
@@ -93,12 +98,12 @@ const TimelineRightBlock = ({
       <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex flex-col items-end justify-start self-stretch overflow-hidden"
-                initial={{ opacity: 0, scale: 1, x: "-100px" }}
+        initial={{ opacity: 0, scale: 1, x: "-100px" }}
         whileInView={{
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: .4, duration: 1.1 },
+          transition: { delay: 0.4, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >
@@ -107,7 +112,14 @@ const TimelineRightBlock = ({
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture pointer-events-none mix-blend-darken " src="devPic.jpg" />
+            <Image
+              data-layer="Picture"
+              className="Picture pointer-events-none mix-blend-darken"
+              src="/devPic.jpg"
+              alt="devPic"
+                                             height={107}
+    width={403}
+            />
           )}
           <div
             data-layer="Text Frame"
@@ -131,12 +143,12 @@ const TimelineRightBlock = ({
       <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex flex-col items-end justify-start self-stretch overflow-hidden"
-                        initial={{ opacity: 0, scale: 1, x: "-100px" }}
+        initial={{ opacity: 0, scale: 1, x: "-100px" }}
         whileInView={{
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: .5, duration: 1.1 },
+          transition: { delay: 0.5, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >
@@ -145,7 +157,14 @@ const TimelineRightBlock = ({
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture pointer-events-none mix-blend-darken " src="3dPic.jpg" />
+            <Image
+              data-layer="Picture"
+              className="Picture pointer-events-none mix-blend-darken"
+              src="/3dPic.jpg"
+              alt="3dPic"
+                           height={107}
+    width={358}
+            />
           )}
           <div
             data-layer="Text Frame"
@@ -169,12 +188,12 @@ const TimelineRightBlock = ({
       <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex flex-col items-end justify-start self-stretch overflow-hidden"
-                        initial={{ opacity: 0, scale: 1, x: "-100px" }}
+        initial={{ opacity: 0, scale: 1, x: "-100px" }}
         whileInView={{
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: .6, duration: 1.1 },
+          transition: { delay: 0.6, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >
@@ -183,7 +202,14 @@ const TimelineRightBlock = ({
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture mix-blend-darken pointer-events-none" src="videoPic.jpg" />
+            <Image
+              data-layer="Picture"
+              className="Picture pointer-events-none mix-blend-darken"
+              src="/videoPic.jpg"
+              alt="videoPic"
+                                             height={107}
+    width={403}
+            />
           )}
           <div
             data-layer="Text Frame"
@@ -207,12 +233,12 @@ const TimelineRightBlock = ({
       <motion.div
         data-layer="Timeline Object"
         className="TimelineObject flex flex-col items-end justify-start self-stretch overflow-hidden"
-                        initial={{ opacity: 0, scale: 1, x: "-100px" }}
+        initial={{ opacity: 0, scale: 1, x: "-100px" }}
         whileInView={{
           opacity: 1,
           scale: 1,
           x: "0px",
-          transition: { delay: .8, duration: 1.1 },
+          transition: { delay: 0.8, duration: 1.1 },
         }}
         viewport={{ once: true, amount: 0.2 }}
       >
@@ -221,10 +247,13 @@ const TimelineRightBlock = ({
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img
+            <Image
               data-layer="Picture"
-              className="Picture mix-blend-darken  pointer-events-none"
-              src="graphicDesignPic.jpg"
+              className="Picture pointer-events-none mix-blend-darken"
+              src="/graphicDesignPic.jpg"
+              alt="graphicDesignPic"
+                                             height={107}
+    width={388}
             />
           )}
           <div

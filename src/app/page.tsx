@@ -6,7 +6,6 @@ import "@fontsource/inter";
 import "@fontsource/orbitron/600.css"; // semibold
 import "@fontsource/orbitron/900.css"; // black (if you need it elsewhere)
 import  Origin  from "./Scenes/Origin/Origin";
-import styles from './Scenes/OriginMain.module.css';
 import Hero from "./Scenes/Hero/Hero";
 import Arsenal from "./Scenes/Arsenal/Arsenal";
 import Creations from "./Scenes/Creations/Creations";
@@ -14,7 +13,7 @@ import Contact from "./Scenes/Contact/Contact";
 import StickyNav from "./Scenes/Origin/StickyNav";
 
 // Main hero component
-export const HeroMain: FC = (): JSX.Element => {
+const HeroMain: FC = (): JSX.Element => {
 
   
 const [menuOpen, setMenuOpen] = useState(false);

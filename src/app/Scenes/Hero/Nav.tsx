@@ -11,9 +11,6 @@ type NavMainProps = {
 
 const NavMain: React.FC<NavMainProps> = ({ menuOpen, setMenuOpen }) => {
 
-  const isMd = useMediaQuery({
-    query: "(min-width: 751px) and (max-width: 1100px)",
-  });
   const isLgPlus = useMediaQuery({ query: "(min-width: 1101px)" });
   const isMaxMd = useMediaQuery({ query: "(max-width: 1100px)" });
   const [mounted, setMounted] = useState(false);

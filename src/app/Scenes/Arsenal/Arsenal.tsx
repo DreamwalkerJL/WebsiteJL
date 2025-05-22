@@ -1,16 +1,15 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import SkillList from "./Skillist";
 
 const Arsenal: React.FC = () => {
   return (
     <div
       data-layer="Hero Main"
-      className="HeroMain z-10 inline-flex h-full w-[1920px] flex-col items-center justify-start overflow-hidden "
+      className="HeroMain z-10 inline-flex h-full w-[1920px] flex-col items-center justify-start overflow-hidden"
     >
-      {/* <img className="absolute opacity-50" src="./Hero Main1100.png"/> */}
+      {/* <Image className="absolute opacity-50" src="./Hero Main1100.png"/> */}
 
       <div
         data-layer="Arsenal"
@@ -113,7 +112,7 @@ const Arsenal: React.FC = () => {
           </div>
           <motion.img
             data-layer="Sword"
-            className="Sword absolute  top-[155px] left-[650px] w-[977px] origin-top-left"
+            className="Sword absolute top-[155px] left-[650px] w-[977px] origin-top-left"
             src="./Sword.png"
             initial={{ opacity: 0, x: -40 }} // start 200px off to the left, invisible
             whileInView={{
@@ -124,7 +123,7 @@ const Arsenal: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
           />
         </div>
-     <SkillList/>
+        <SkillList />
         <div
           data-layer="Bot Space"
           className="BotSpace h-48 self-stretch bg-neutral-700 p-2.5 sm:h-36"

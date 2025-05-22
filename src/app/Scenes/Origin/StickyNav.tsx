@@ -16,9 +16,6 @@ const StickyNav: React.FC<StickyNavProps> = ({ menuOpen, setMenuOpen }) => {
 
   const lastScrollY = useRef(0);
 
-  const isMd = useMediaQuery({
-    query: "(min-width: 751px) and (max-width: 1100px)",
-  });
   const isLgPlus = useMediaQuery({ query: "(min-width: 1101px)" });
   const isMaxMd = useMediaQuery({ query: "(max-width: 1100px)" });
 
