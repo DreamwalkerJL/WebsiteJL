@@ -122,7 +122,7 @@ const Hero: React.FC<HeroProps> = ({ menuOpen, setMenuOpen }) => {
                   experience. Passionate about creating digital experiences that
                   feel good to use. I love building clean and thoughtful
                   interfaces. I&apos;m always looking for ways to improve, whether
-                  it&apos; refining my craft or just growing as a person. When I&apos; m
+                  it&apos;s refining my craft or just growing as a person. When I&apos;m
                   not coding, you&apos;ll probably find me at the gym, enjoying the
                   sun, video games, or just hanging out with friends.
                 </div>
