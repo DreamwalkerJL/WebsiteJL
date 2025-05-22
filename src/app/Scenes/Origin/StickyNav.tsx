@@ -168,15 +168,15 @@ useEffect(() => {
                 <AnimatePresence>
                   {menuOpen && (
                     <motion.div
-                      initial={{ y: -200, opacity: 0 }}
+                      initial={{ y: -200, opacity: 1 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: -200, opacity: 0 }}
                       transition={{ duration: 0.4, ease: "easeOut" }}
-                      className="fixed top-0 left-0 z-50 opacity-100 flex h-screen w-full flex-col items-center justify-center gap-6 bg-white"
+                      className="fixed top-0 left-0 z-50 pb-20 opacity-100 flex h-screen w-full flex-col items-center justify-center gap-6 bg-white"
                     >
                       <button
                         onClick={() => setMenuOpen(false)}
-                        className="absolute top-5 right-5 text-6xl"
+                        className="absolute top-5  right-5 text-6xl"
                       >
                         ×
                       </button>
@@ -190,7 +190,7 @@ useEffect(() => {
                         <div
                           key={item}
                           onClick={() => handleScrollTo(item.toLowerCase())}
-                          className="cursor-pointer font-['Orbitron'] text-2xl uppercase transition hover:scale-105"
+                          className="cursor-pointer  font-['Orbitron'] text-2xl uppercase transition hover:scale-105"
                         >
                           {item}
                         </div>
