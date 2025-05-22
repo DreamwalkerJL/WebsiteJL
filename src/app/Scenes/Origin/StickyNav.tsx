@@ -89,6 +89,7 @@ useEffect(() => {
 
   return (
     <AnimatePresence>
+       <>
       {showNav && (
         <motion.nav
           initial={{ y: -100 }}
@@ -100,54 +101,12 @@ useEffect(() => {
             delay: firstLoad ? 0.8 : 0, // ⬅️ Add delay only on first load
           }}
           className={`fixed top-0 left-0 z-50 w-full transition-colors duration-500 ease-in-out ${
-            scrolled ? "bg-white/80 shadow-lg backdrop-blur-md" : ""
+            scrolled && isLgPlus ? "bg-white/80 shadow-lg backdrop-blur-md" : ""
           }`}
         >
           <div className="mx-auto flex max-w-[1920px] items-center justify-between px-6 md:justify-end">
             {/* Mobile Menu */}
-            {isMaxMd && (
-              <>
-                <div
-                  className="cursor-pointer text-4xl"
-                  onClick={() => setMenuOpen((prev) => !prev)}
-                >
-                  ☰
-                </div>
-                <AnimatePresence>
-                  {menuOpen && (
-                    <motion.div
-                      initial={{ y: -200, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      exit={{ y: -200, opacity: 0 }}
-                      transition={{ duration: 0.4, ease: "easeOut" }}
-                      className="fixed top-0 left-0 z-50 flex h-screen w-full flex-col items-center justify-center gap-6 bg-white"
-                    >
-                      <button
-                        onClick={() => setMenuOpen(false)}
-                        className="absolute top-5 right-5 text-6xl"
-                      >
-                        ×
-                      </button>
-                      {[
-                        "Home",
-                        "Origin",
-                        "Arsenal",
-                        "Creations",
-                        "Contact",
-                      ].map((item) => (
-                        <div
-                          key={item}
-                          onClick={() => handleScrollTo(item.toLowerCase())}
-                          className="cursor-pointer font-['Orbitron'] text-2xl uppercase transition hover:scale-105"
-                        >
-                          {item}
-                        </div>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </>
-            )}
+        
 
             {/* Desktop Menu */}
             {isLgPlus && (
@@ -189,7 +148,63 @@ useEffect(() => {
           </div>
         </motion.nav>
       )}
+          {isMaxMd && (
+              <>
+                   <motion.nav
+     initial={{ y:-50, opacity: 0 }}
+                      animate={{ y:0, opacity: 1 }}
+                  
+                      transition={{ delay: 2,duration: 1.4, ease: "easeOut" }}
+          className={`fixed top-0 left-0 z-50 w-full  bg-white/80 shadow-lg backdrop-blur-xl shadow-lg"
+          }`}
+        >
+          <div className="mx-auto flex max-w-[1920px] items-center justify-between px-6 md:justify-end">
+                <div
+                  className="cursor-pointer text-4xl my-2 p-1 rounded-[3px] text-[#404040]  "
+                  onClick={() => setMenuOpen((prev) => !prev)}
+                >
+                  ☰
+                </div>
+                <AnimatePresence>
+                  {menuOpen && (
+                    <motion.div
+                      initial={{ y: -200, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -200, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                      className="fixed top-0 left-0 z-50 flex h-screen w-full flex-col items-center justify-center gap-6 bg-white"
+                    >
+                      <button
+                        onClick={() => setMenuOpen(false)}
+                        className="absolute top-5 right-5 text-6xl"
+                      >
+                        ×
+                      </button>
+                      {[
+                        "Home",
+                        "Origin",
+                        "Arsenal",
+                        "Creations",
+                        "Contact",
+                      ].map((item) => (
+                        <div
+                          key={item}
+                          onClick={() => handleScrollTo(item.toLowerCase())}
+                          className="cursor-pointer font-['Orbitron'] text-2xl uppercase transition hover:scale-105"
+                        >
+                          {item}
+                        </div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+                     </div>
+        </motion.nav>
+              </>
+            )}
+            </>
     </AnimatePresence>
+    
   );
 };
 
