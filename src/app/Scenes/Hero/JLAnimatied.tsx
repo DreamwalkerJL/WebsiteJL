@@ -8,19 +8,25 @@ const JLAnimated = () => {
     <>
       {/* Letters */}
       <div className="Jl absolute top-[-90px] flex justify-start overflow-visible font-['Orbitron'] text-[480px] font-black text-white md:hidden">
-        {/* J */}
+        {/* Joshua */}
         <motion.div
           // 1) Only the intro in `initial`
           className="absolute top-[208px] left-[295] z-1 overflow-visible pl-3 text-[30px] whitespace-pre-line text-[#404040]/20"
-         
+              initial={{
+            opacity: 0,
+            x: 40,
+      
+          }}
           // 2) Final intro + hover state
           animate={{
             opacity: hovered === "J" ? 1 : 0,
+               x: 0,
           }}
           // 3) Two‐part transition
           transition={{
             // default (opacity, x, clipPath)
-            default: { delay: 0.1, duration: 0.3, ease: "easeOut" },
+            default: { delay: 0.3, duration: 2.3, ease: "easeOut" },
+              opacity: { delay: 0.1, duration: 0.3 },
           }}
         >
           {"J\nO\nS\nH\nU\nA"}
@@ -54,19 +60,25 @@ const JLAnimated = () => {
         >
           J
         </motion.div>
-        {/* J */}
+        {/* Lim */}
         <motion.div
           // 1) Only the intro in `initial`
           className="absolute top-[208px] left-[425] z-1 overflow-visible text-center pl-3 text-[30px] whitespace-pre-line text-[#404040]/20"
-         
+              initial={{
+            opacity: 0,
+            x: -40,
+      
+          }}
           // 2) Final intro + hover state
           animate={{
             opacity: hovered === "L" ? 1 : 0,
+               x: 0,
           }}
           // 3) Two‐part transition
           transition={{
             // default (opacity, x, clipPath)
-            default: { delay: 0.1, duration: 0.3, ease: "easeOut" },
+            default: { delay: 0.3, duration: 2.3, ease: "easeOut" },
+              opacity: { delay: 0.1, duration: 0.3 },
           }}
         >
           {"L\nI\nM"}
