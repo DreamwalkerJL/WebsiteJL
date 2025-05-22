@@ -57,26 +57,28 @@ const handleScrollTo = (id: string) => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    setScrolled(currentScrollY > 50);
 
-      setScrolled(currentScrollY > 50); // ✅ Add this line
+    if (currentScrollY < lastScrollY.current) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
 
-      if (currentScrollY < lastScrollY.current) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
+    lastScrollY.current = currentScrollY;
+  };
 
-      lastScrollY.current = currentScrollY;
-    };
+  const currentScrollY = window.scrollY;
+  setScrolled(currentScrollY > 50); // ✅ Immediate check on mount
+  lastScrollY.current = currentScrollY;
 
-    lastScrollY.current = window.scrollY;
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", menuOpen);

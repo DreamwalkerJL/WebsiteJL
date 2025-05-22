@@ -48,7 +48,7 @@ const TimelineLeftBlock = ({
             </div>
           </div>
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture pointer-events-none" src="./aiPic.png" />
+            <img data-layer="Picture" className="Picture pointer-events-none mix-blend-darken" src="./aiPic.jpg" />
           )}
         </div>
       </motion.div>
@@ -88,8 +88,8 @@ const TimelineLeftBlock = ({
           {mounted && isXlPlus && (
             <img
               data-layer="Picture"
-              className="Picture pl-5"
-              src="uiuxPic.png"
+              className="Picture pl-5 mix-blend-darken "
+              src="uiuxPic.jpg"
             />
           )}
         </div>

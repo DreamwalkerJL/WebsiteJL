@@ -22,7 +22,7 @@ const Origin: React.FC = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div data-layer="Hero Main" className="HeroMain w-full max-w-[1920px] relative bg-white shadow-[0_0_100px_1px] shadow-white inline-flex flex-col justify-start items-center overflow-hidden">
+    <div data-layer="Hero Main" className="HeroMain w-full max-w-[1920px] relative  inline-flex flex-col justify-start items-center overflow-hidden">
       <motion.div
         className="OriginMain flex flex-col items-start justify-start gap-[50px] self-stretch overflow-hidden bg-white lg:gap-[0px]"
         initial="hidden"
@@ -72,16 +72,16 @@ const Origin: React.FC = () => {
             <TimelineRightBlock isXlPlus={isXlPlus} mounted={mounted} isMaxLg={isMaxLg} isMaxMd={isMaxMd} />
           </motion.div>
 
-          <motion.img
-            className="OriginCharEffectBg absolute top-[-281px] p-2.5 sm:top-[-40px] sm:left-[-50px] sm:h-[345px] sm:w-[350px] md:left-[-150px]  pointer-events-none lg:top-[-65px] lg:w-[870px] lg:max-w-[870px]"
-            src="Origin Char Effect BG.png"
+          {/* <motion.img
+            className="OriginCharEffectBg absolute mix-blend-darken top-[-281px] p-2.5 sm:top-[-40px] sm:left-[-50px] sm:h-[345px] sm:w-[350px] md:left-[-150px]  pointer-events-none lg:top-[-65px] lg:w-[870px] lg:max-w-[870px]"
+            src="Origin-Char-Effect-BG.jpg"
            initial={{ opacity: 0, scale: 0.8, y: "0px" }}
             whileInView={{ opacity: 1, scale: 1,y:"0px", transition: { delay: 0.5, duration: 1.1 } }}
             viewport={{ once: true, amount: 0.3 }}
-          />
+          /> */}
 
 <motion.img
-  className="OriginCharEffectBg pointer-events-none absolute top-[-251px] p-2.5 sm:top-[-40px] sm:left-[-50px] sm:h-[345px] sm:w-[350px] md:left-[-140px] lg:top-[-65px] lg:w-[850px] lg:max-w-[850px]"
+  className="OriginCharEffectBg  pointer-events-none absolute top-[-251px] p-2.5 sm:top-[-40px] sm:left-[-50px] sm:h-[345px] sm:w-[350px] md:left-[-140px] lg:top-[-65px] lg:w-[850px] lg:max-w-[850px]"
   src="Origin Char.png"
   initial={{ opacity: 0, scale: 0.8, y: "100px" }}
   whileInView={{ opacity: 1, scale: 1, y: "0px", transition: { delay: 0.2, duration: 1.1 } }}

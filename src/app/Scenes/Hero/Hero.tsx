@@ -55,7 +55,7 @@ const handleScrollTo = (id: string) => {
   }, [menuOpen]);
 
   return (
-    <motion.div className="HeroMain relative inline-flex h-[1300px] w-full max-w-[1920px] flex-col items-center justify-start overflow-hidden bg-white shadow-[0_0_100px_1px] shadow-white">
+    <motion.div className="HeroMain relative inline-flex h-[1300px] w-full max-w-[1920px] flex-col items-center justify-start overflow-hidden ">
       <motion.div
         initial={{ scale: 1.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -64,19 +64,19 @@ const handleScrollTo = (id: string) => {
       >
         <img
           data-layer="BG Top"
-          className="BgTop absolute top-[1px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
-          src="./BG Top.png"
+          className="BgTop mix-blend-darken  absolute top-[1px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
+          src="./BG Top.jpg"
         />
 {/* <DustOverlay/> */}
    <JLAnimated/>
         <img
           data-layer="BG Top Transp"
-          className="BgTopTransp absolute top-[1px] h-[902px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
-          src="./BG Top Transp.png"
+          className="BgTopTransp mix-blend-darken  absolute top-[1px] h-[902px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
+          src="./BG Top Transp.jpg"
         />
         <img
           data-layer="BG Bot"
-          className="BgBot absolute top-[-29px] h-[1337px] w-[1920px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
+          className="BgBot   absolute top-[-29px] h-[1337px] w-[1920px] min-w-[1920px] sm:left-[-400px] md:left-[-480px]"
           src="BG Bot.png"
         />
         

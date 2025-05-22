@@ -138,7 +138,7 @@ const Creations: React.FC = () => {
             <motion.img
               data-layer="Header BG"
               className="HeaderBg absolute top-[-175px] left-[260px] h-[637px] w-[657px] p-2.5 mix-blend-lighten sm:top-[0px] sm:h-[300px] md:left-[20px]"
-              src="./Flower.png"
+              src="./Flower.jpg"
               variants={headerItemVariants}
             />
 

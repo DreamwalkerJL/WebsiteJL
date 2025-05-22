@@ -7,10 +7,11 @@ const JLAnimated = () => {
   return (
     <>
       {/* Letters */}
-      <div className="Jl absolute top-[-90px] flex justify-start font-['Orbitron'] text-[480px] font-black text-white md:hidden">
+      <div className="Jl overflow-visible  absolute top-[-90px] flex justify-start font-['Orbitron'] text-[480px] font-black text-white md:hidden">
         {/* J */}
         <motion.div
           // 1) Only the intro in `initial`
+          className="overflow-visible     pl-3"
           initial={{
             opacity: 0,
             x: 40,
@@ -23,7 +24,7 @@ const JLAnimated = () => {
             clipPath: "inset(0 0% 0% 0%)",
             filter: hovered === "J" ? "brightness(1.5)" : "brightness(1)",
             textShadow:
-              hovered === "J" ? "0 0 18px #ff3cac" : "none",
+           hovered === "J" ? "0 0 18px #ff3cac" : "0 0 0px #bcced1",
           }}
           // 3) Two‐part transition
           transition={{
@@ -39,6 +40,7 @@ const JLAnimated = () => {
 
         {/* L */}
         <motion.div
+           className="pr-3"
           initial={{
             opacity: 0,
             x: -40,
@@ -50,7 +52,7 @@ const JLAnimated = () => {
             clipPath: "inset(0 0% 0 0%)",
             filter: hovered === "L" ? "brightness(1.5)" : "brightness(1)",
             textShadow:
-              hovered === "L" ? "0 0 18px #ff3cac" : "none",
+              hovered === "L" ? "0 0 18px #ff3cac" : "0 0 0px #bcced1",
           }}
           transition={{
             default: { delay: 0.3, duration: 2.3, ease: "easeOut" },

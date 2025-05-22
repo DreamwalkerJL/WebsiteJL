@@ -8,7 +8,7 @@ const Arsenal: React.FC = () => {
   return (
     <div
       data-layer="Hero Main"
-      className="HeroMain z-10 inline-flex h-full w-[1920px] flex-col items-center justify-start overflow-hidden bg-white shadow-[0_0_100px_1px] shadow-white"
+      className="HeroMain z-10 inline-flex h-full w-[1920px] flex-col items-center justify-start overflow-hidden "
     >
       {/* <img className="absolute opacity-50" src="./Hero Main1100.png"/> */}
 
@@ -113,7 +113,7 @@ const Arsenal: React.FC = () => {
           </div>
           <motion.img
             data-layer="Sword"
-            className="Sword absolute top-[155px] left-[650px] w-[977px] origin-top-left"
+            className="Sword absolute  top-[155px] left-[650px] w-[977px] origin-top-left"
             src="./Sword.png"
             initial={{ opacity: 0, x: -40 }} // start 200px off to the left, invisible
             whileInView={{

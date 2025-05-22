@@ -31,8 +31,8 @@ const TimelineRightBlock = ({
               {mounted && isXlPlus && (
                 <img
                   data-layer="Picture"
-                  className="Picture pointer-events-none"
-                  src="devPic.png"
+                  className="Picture mix-blend-darken  pointer-events-none"
+                  src="devPic.jpg"
                 />
               )}
               <div
@@ -65,8 +65,8 @@ const TimelineRightBlock = ({
               {mounted && isXlPlus && (
                 <img
                   data-layer="Picture"
-                  className="Picture pointer-events-none"
-                  src="devPic.png"
+                  className="Picture mix-blend-darken  pointer-events-none"
+                  src="devPic.jpg"
                 />
               )}
               <div
@@ -107,7 +107,7 @@ const TimelineRightBlock = ({
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture pointer-events-none" src="devPic.png" />
+            <img data-layer="Picture" className="Picture pointer-events-none mix-blend-darken " src="devPic.jpg" />
           )}
           <div
             data-layer="Text Frame"
@@ -145,7 +145,7 @@ const TimelineRightBlock = ({
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture pointer-events-none" src="3dPic.png" />
+            <img data-layer="Picture" className="Picture pointer-events-none mix-blend-darken " src="3dPic.jpg" />
           )}
           <div
             data-layer="Text Frame"
@@ -183,7 +183,7 @@ const TimelineRightBlock = ({
           className="TitleFrame inline-flex h-[107px] items-center justify-end self-stretch overflow-hidden rounded-lg bg-gradient-to-r from-white to-[#e4f2fc] px-5 sm:h-[40px] md:h-[70px]"
         >
           {mounted && isXlPlus && (
-            <img data-layer="Picture" className="Picture pointer-events-none" src="videoPic.png" />
+            <img data-layer="Picture" className="Picture mix-blend-darken pointer-events-none" src="videoPic.jpg" />
           )}
           <div
             data-layer="Text Frame"
@@ -223,8 +223,8 @@ const TimelineRightBlock = ({
           {mounted && isXlPlus && (
             <img
               data-layer="Picture"
-              className="Picture pointer-events-none"
-              src="graphicDesignPic.png"
+              className="Picture mix-blend-darken  pointer-events-none"
+              src="graphicDesignPic.jpg"
             />
           )}
           <div
