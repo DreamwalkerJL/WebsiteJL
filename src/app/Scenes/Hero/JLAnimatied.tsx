@@ -7,11 +7,28 @@ const JLAnimated = () => {
   return (
     <>
       {/* Letters */}
-      <div className="Jl overflow-visible  absolute top-[-90px] flex justify-start font-['Orbitron'] text-[480px] font-black text-white md:hidden">
+      <div className="Jl absolute top-[-90px] flex justify-start overflow-visible font-['Orbitron'] text-[480px] font-black text-white md:hidden">
         {/* J */}
         <motion.div
           // 1) Only the intro in `initial`
-          className="overflow-visible     pl-3"
+          className="absolute top-[208px] left-[295] z-1 overflow-visible pl-3 text-[30px] whitespace-pre-line text-[#404040]/20"
+         
+          // 2) Final intro + hover state
+          animate={{
+            opacity: hovered === "J" ? 1 : 0,
+          }}
+          // 3) Two‐part transition
+          transition={{
+            // default (opacity, x, clipPath)
+            default: { delay: 0.1, duration: 0.3, ease: "easeOut" },
+          }}
+        >
+          {"J\nO\nS\nH\nU\nA"}
+        </motion.div>
+        {/* J */}
+        <motion.div
+          // 1) Only the intro in `initial`
+          className="overflow-visible pl-3"
           initial={{
             opacity: 0,
             x: 40,
@@ -24,7 +41,7 @@ const JLAnimated = () => {
             clipPath: "inset(0 0% 0% 0%)",
             filter: hovered === "J" ? "brightness(1.5)" : "brightness(1)",
             textShadow:
-           hovered === "J" ? "0 0 18px #ff3cac" : "0 0 0px #bcced1",
+              hovered === "J" ? "0 0 18px #ff3cac" : "0 0 0px #bcced1",
           }}
           // 3) Two‐part transition
           transition={{
@@ -37,10 +54,26 @@ const JLAnimated = () => {
         >
           J
         </motion.div>
-
+        {/* J */}
+        <motion.div
+          // 1) Only the intro in `initial`
+          className="absolute top-[208px] left-[425] z-1 overflow-visible text-center pl-3 text-[30px] whitespace-pre-line text-[#404040]/20"
+         
+          // 2) Final intro + hover state
+          animate={{
+            opacity: hovered === "L" ? 1 : 0,
+          }}
+          // 3) Two‐part transition
+          transition={{
+            // default (opacity, x, clipPath)
+            default: { delay: 0.1, duration: 0.3, ease: "easeOut" },
+          }}
+        >
+          {"L\nI\nM"}
+        </motion.div>
         {/* L */}
         <motion.div
-           className="pr-3"
+          className="pr-3"
           initial={{
             opacity: 0,
             x: -40,
@@ -66,12 +99,12 @@ const JLAnimated = () => {
 
       {/* Invisible hover zones */}
       <div
-        className="absolute top-0 left-0 h-[34%] w-1/2 z-20 pointer-events-auto"
+        className="pointer-events-auto absolute top-0 left-0 z-20 h-[34%] w-1/2"
         onMouseEnter={() => setHovered("J")}
         onMouseLeave={() => setHovered(null)}
       />
       <div
-        className="absolute top-0 right-0 h-[34%] w-1/2 z-20 pointer-events-auto"
+        className="pointer-events-auto absolute top-0 right-0 z-20 h-[34%] w-1/2"
         onMouseEnter={() => setHovered("L")}
         onMouseLeave={() => setHovered(null)}
       />
