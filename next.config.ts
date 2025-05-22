@@ -1,7 +1,10 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  // Remove this → turbopack is NOT a valid config key
+  experimental: {
+    // turn off the new CSS optimizer so it won’t try to load lightningcss.linux-x64-gnu.node
+    optimizeCss: false,
+  },
 }
 
 export default nextConfig
