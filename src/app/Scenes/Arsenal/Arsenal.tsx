@@ -17,11 +17,11 @@ const Arsenal: React.FC = () => {
       >
         <div
           data-layer="Arsenal Header"
-          className="ArsenalHeader relative inline-flex h-[670px] items-start justify-center self-stretch sm:top-[-20px] sm:h-[250px] sm:scale-[.25] lg:top-[-100px] lg:mt-[100px] lg:h-[350px] lg:scale-55"
+          className="ArsenalHeader relative inline-flex h-[670px] items-start justify-center self-stretch sm:top-[-20px] sm:h-[250px] sm:scale-[.25] lg:top-[-100px] lg:mt-[100px] sm:mt-0 lg:h-[350px] lg:scale-55"
         >
           <div
             data-layer="Top Space"
-            className="TopSpace h-48 flex-1 lg:h-96"
+            className="TopSpace h-48 flex-1 lg:h-96 sm:h-48"
           />
           <motion.div
             data-layer="Title"
@@ -126,7 +126,7 @@ const Arsenal: React.FC = () => {
         <SkillList />
         <div
           data-layer="Bot Space"
-          className="BotSpace h-48 self-stretch bg-neutral-700 p-2.5 sm:h-36"
+          className="BotSpace h-48 self-stretch bg-neutral-700 p-2.5 sm:h-27"
         />
       </div>
     </div>
